@@ -10,11 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace TakeOutApplication
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Profile : ContentPage
+    public partial class ProfilePage : ContentPage
     {
-        public Profile()
+        public ProfilePage()
         {
             InitializeComponent();
+        }
+
+        private async void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//SignInPage");
         }
     }
 }

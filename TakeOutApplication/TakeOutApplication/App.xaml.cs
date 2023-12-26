@@ -10,6 +10,7 @@ namespace TakeOutApplication
         {
             InitializeComponent();
 
+            //MainPage = new NavigationPage(new SignInPage());
             MainPage = new MainPage();
         }
 

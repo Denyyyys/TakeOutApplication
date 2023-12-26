@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TakeOutApplication.SignInPage"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.NavBarIsVisible="False"
+             >
+    <!--<StackLayout
+        Margin="15"
+        VerticalOptions="Center">
+        <Entry x:Name="emailEntry" 
+               Placeholder="Email" 
+               Text="Test"
+               Keyboard="Email"/>
+
+        <Entry x:Name="passwordEntry" 
+               Placeholder="Password" 
+               Text="Test"
+               IsPassword="True" />
+
+        <Button x:Name="loginButton" Text="Login" 
+                Clicked="loginButton_Clicked"
+                />
+    </StackLayout>-->
+    <StackLayout Padding="30, 100, 30, 0 " BackgroundColor="#BEADFA">
+        <!--<Image Source="" />-->
+        <Label Text="Sign In" FontSize="Title"/>
+        <Label Text="Hi there! Nice to see you again." FontSize="Subtitle"/>
+        <!--<Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />-->
+        <Label Margin="0, 20, 0, 0" Text="Email" TextColor="#FFF3DA" FontSize="20"/>
+        <Entry Placeholder="Email"  Keyboard="Email" />
+
+        <Label Margin="0, 20, 0, 0" Text="Password" TextColor="#FFF3DA" FontSize="20"/>
+        <Entry Placeholder="Password"  IsPassword="True"  />
+
+        <Button  Text="Sign in" Clicked="Button_Sign_In_Clicked"  />
+
+        <Grid VerticalOptions="EndAndExpand" Margin="0,0,0,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <!-- First column content -->
+            <Label Grid.Column="0" Text="Forgot Password?" BackgroundColor="LightBlue"  />
+
+            <!-- Second column content -->
+            <Label Grid.Column="1" Text="Sign Up" BackgroundColor="LightGreen" HorizontalTextAlignment="End" >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>

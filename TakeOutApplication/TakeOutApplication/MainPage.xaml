@@ -1,19 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TakeOutApplication"
-             x:Class="TakeOutApplication.MainPage">
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:shell="http://xamarin.com/schemas/2014/forms"
+            mc:Ignorable="d"
+            xmlns:local="clr-namespace:TakeOutApplication"
+            Title="TakeOutApplication"
+            x:Class="TakeOutApplication.MainPage"
+       >
     <Shell.FlyoutHeader>
         <local:HeaderContentView/>
     </Shell.FlyoutHeader>
-    <FlyoutItem Title="MyTabApp" 
+
+
+    <ShellItem Route="SignInPage" FlyoutItemIsVisible="False">
+        <ShellContent ContentTemplate="{DataTemplate local:SignInPage}"/>
+    </ShellItem>
+    
+    <!--<FlyoutItem Title="MyTabApp" 
                 Shell.TabBarIsVisible="False"
                 FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="Profile" Icon="ic_action_person.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Profile}"/>
-        <ShellContent Title="Restaurants" Icon="ic_action_restaurant_menu.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Restaurants}"/>
+        
+        <ShellContent 
+            Title="Profile" 
+            Icon="ic_action_person.png" 
+            IsTabStop="True" 
+            ContentTemplate="{DataTemplate local:ProfilePage}" Route="ProfilePage"/>
+        <ShellContent 
+            Title="Restaurants" 
+            Icon="ic_action_restaurant_menu.png" 
+            IsTabStop="True" 
+            ContentTemplate="{DataTemplate local:RestaurantsPage}" Route="RestaurantsPage"/>
+    </FlyoutItem>-->
+
+    <FlyoutItem Title="Profile" Icon="ic_action_person.png">
+        <ShellContent ContentTemplate="{DataTemplate local:ProfilePage}" Route="ProfilePage"/>
     </FlyoutItem>
-    <ShellContent Title="Profile" Icon="ic_action_person.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Profile}"/>
 
+    <FlyoutItem Title="Restaurants" Icon="ic_action_restaurant_menu.png">
+        <ShellContent ContentTemplate="{DataTemplate local:RestaurantsPage}" Route="RestaurantsPage"/>
+    </FlyoutItem>
 
+    <!--<ShellContent Title="Profile" Icon="ic_action_person.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Profile}"/>-->
 
 </Shell>

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace TakeOutApplication
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Restaurants : ContentPage
+    public partial class RestaurantsPage : ContentPage
     {
-        public Restaurants()
+        public RestaurantsPage()
         {
             InitializeComponent();
         }
