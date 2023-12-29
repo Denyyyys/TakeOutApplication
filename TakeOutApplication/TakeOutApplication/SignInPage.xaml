@@ -30,7 +30,7 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />-->
         <Label Margin="0, 20, 0, 0" Text="Email" TextColor="#FFF3DA" FontSize="20"/>
-        <Entry Placeholder="Email"  Keyboard="Email" />
+        <Entry Placeholder="Your Email Address"  Keyboard="Email" />
 
         <Label Margin="0, 20, 0, 0" Text="Password" TextColor="#FFF3DA" FontSize="20"/>
         <Entry Placeholder="Password"  IsPassword="True"  />

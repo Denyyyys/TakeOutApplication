@@ -42,6 +42,22 @@
         <ShellContent ContentTemplate="{DataTemplate local:RestaurantsPage}" Route="RestaurantsPage"/>
     </FlyoutItem>
 
+    <FlyoutItem Title="Favourites" Icon="ic_action_favorite.png">
+        <ShellContent ContentTemplate="{DataTemplate local:FavouritesPage}" Route="FavouritesPage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="History" Icon="ic_action_history.png">
+        <ShellContent ContentTemplate="{DataTemplate local:HistoryPage}" Route="HistoryPage"/>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="My Cart" Icon="ic_action_shopping_cart.png">
+        <ShellContent ContentTemplate="{DataTemplate local:MyCartPage}" Route="MyCartPage"/>
+    </FlyoutItem>
+
+
+    <FlyoutItem  Title="Logout" Icon="ic_action_exit_to_app.png">
+        <ShellContent ContentTemplate="{DataTemplate local:SignInPage}" Route="SignInPage"/>
+    </FlyoutItem>
     <!--<ShellContent Title="Profile" Icon="ic_action_person.png" IsTabStop="True" ContentTemplate="{DataTemplate local:Profile}"/>-->
 
 </Shell>

@@ -19,7 +19,7 @@
             <Image Aspect="AspectFill" Source=" gradient.jpg" Grid.ColumnSpan="5" Grid.RowSpan="4" Opacity="0.6" x:Name="gradientImage" />
             <Image Source="user.png" HeightRequest="80" WidthRequest="80" Grid.Column="1" Grid.Row="1" HorizontalOptions="Start" VerticalOptions="End" x:Name="userImage"/>
             <StackLayout VerticalOptions="CenterAndExpand" Grid.Row="1" Margin="10,0,0,0" Grid.Column="2" Grid.ColumnSpan="3" Orientation="Vertical">
-                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="White" Text="Xamarin Guy"/>
+                <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="White" Text="Name and coś"/>
                 <Label HorizontalTextAlignment="Start" VerticalTextAlignment="Center" TextColor="White" Text="something@gmail.com"/>
             </StackLayout>
         </Grid>

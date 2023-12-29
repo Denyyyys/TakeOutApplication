@@ -16,5 +16,15 @@ namespace TakeOutApplication
         {
             InitializeComponent();
         }
+
+        private async void SignUpButton_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync($"//ProfilePage");
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SignInPage());
+        }
     }
 }
