@@ -1,10 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-
-             x:Class="TakeOutApplication.ProfilePage">
+             xmlns:local="clr-namespace:TakeOutApplication"
+             x:Class="TakeOutApplication.ProfilePage"
+             >
+    
     <ContentPage.Content>
-        <Label Text="I am profile" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        <StackLayout BackgroundColor="Aqua" Padding="20, 20, 15, 10">
+            
+            <Label Text="My Profile                 " FontSize="20" HorizontalTextAlignment="End" VerticalTextAlignment="End"/>
+            <BoxView HeightRequest="2"  Color="Black" HorizontalOptions="FillAndExpand"  />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Row 0, Column 0 -->
+                <Label Text="My Balance" Grid.Row="0" Grid.Column="0" FontSize="Medium" BackgroundColor="LightGray" Margin="0,0,0,15" />
+
+                <!-- Row 0, Column 1 -->
+                <Label Text="Row 0, Column 1" Grid.Row="0" Grid.Column="1" BackgroundColor="LightGray" FontSize="Medium" Margin="0,0,0,15" x:Name="balanceLabel"/>
+
+                <!-- Row 1, Column 0 -->
+                <Label Text="Favourite Restaurant" Grid.Row="1" Grid.Column="0" BackgroundColor="LightBlue" FontSize="Medium" Margin="0,0,0,15"/>
+
+                <!-- Row 1, Column 1 -->
+                <Label Text="Row 1, Column 1" Grid.Row="1" Grid.Column="1" BackgroundColor="LightBlue" FontSize="Medium" Margin="0,0,0,15" x:Name="favouriteRestaurantLabel"/>
+
+                <!-- Row 2, Column 0 -->
+                <Label Text="Favouirite Food" Grid.Row="2" Grid.Column="0" BackgroundColor="LightGreen" FontSize="Medium" Margin="0,0,0,15"/>
+
+                <!-- Row 2, Column 1 -->
+                <Label Text="Row 2, Column 1" Grid.Row="2" Grid.Column="1" BackgroundColor="LightGreen" FontSize="Medium" Margin="0,0,0,15" x:Name="favouriteFoodLabel"/>
+
+                <!-- Row 3, Column 0 -->
+                <Label Text="Email" Grid.Row="3" Grid.Column="0" BackgroundColor="LightPink" FontSize="Medium" Margin="0,0,0,15"/>
+
+                <!-- Row 3, Column 1 -->
+                <Label Text="Row 3, Column 1" Grid.Row="3" Grid.Column="1" BackgroundColor="LightPink" FontSize="Medium" Margin="0,0,0,15" x:Name="emailLabel"/>
+
+            </Grid>
+            <Label Text="Orders                     " FontSize="20" HorizontalTextAlignment="End" VerticalTextAlignment="End"/>
+            <BoxView HeightRequest="2"  Color="Black" HorizontalOptions="FillAndExpand"  />
+
+
+            <StackLayout  
+                VerticalOptions="FillAndExpand" 
+                HorizontalOptions="FillAndExpand" 
+                Padding="0,50,20,0"
+                IsVisible="True"
+                BackgroundColor="Silver">
+                <local:NoOrderdView />
+            </StackLayout>
+            <!--<Label Text="you dont have any orders" IsVisible="{Binding haveOrders}"/>
+            <Label Text="you have orders!!!" IsVisible="{Binding  haveOrders, Converter={StaticResource InverseBoolConverter}}/>-->
+        </StackLayout>
     </ContentPage.Content>
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Logout" Clicked="ToolbarItem_Clicked"/>

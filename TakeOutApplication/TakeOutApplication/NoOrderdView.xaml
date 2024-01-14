@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TakeOutApplication.NoOrderdView">
+  <ContentView.Content>
+        <StackLayout >
+            <Label Text="You don't have any orders" HorizontalTextAlignment="End" VerticalTextAlignment="Center" FontSize="Medium"/>
+            <Label Text="Order Now" TextDecorations="Underline" HorizontalTextAlignment="End" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Green"/>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
