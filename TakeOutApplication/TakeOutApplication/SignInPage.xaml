@@ -30,10 +30,10 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />-->
         <Label Margin="0, 20, 0, 0" Text="Email" TextColor="#FFF3DA" FontSize="20"/>
-        <Entry Placeholder="Your Email Address"  Keyboard="Email" />
+        <Entry Placeholder="Your Email Address" x:Name="emailEntry" Keyboard="Email" />
 
         <Label Margin="0, 20, 0, 0" Text="Password" TextColor="#FFF3DA" FontSize="20"/>
-        <Entry Placeholder="Password"  IsPassword="True"  />
+        <Entry Placeholder="Password" x:Name="passwordEntry" IsPassword="True"  />
 
         <Button  Text="Sign in" Clicked="Button_Sign_In_Clicked"  />
 
