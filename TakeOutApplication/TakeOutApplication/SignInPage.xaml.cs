@@ -20,6 +20,7 @@ namespace TakeOutApplication
 
         private async void Button_Sign_In_Clicked(object sender, EventArgs e)
         {
+            UserData.Name = "Denys";
             await Shell.Current.GoToAsync($"//ProfilePage");
         }
 

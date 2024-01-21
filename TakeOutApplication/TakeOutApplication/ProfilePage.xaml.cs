@@ -19,10 +19,12 @@ namespace TakeOutApplication
             Color myColor = Color.FromRgb(255, 0, 0);
             string email = "MyEmail@gmail.com";
             float balance = 100.2f;
+            string nameee = UserData.Name;
             string favouriteRestaurant = "Central";
             string favouriteFood = "Almas caviar";
             emailLabel.Text = email;
-            balanceLabel.Text = $"${balance}";
+            //balanceLabel.Text = $"${balance}";
+            balanceLabel.Text = nameee;
             favouriteRestaurantLabel.Text = favouriteRestaurant;
             favouriteFoodLabel.Text = favouriteFood;
             bool haveOrders = false;

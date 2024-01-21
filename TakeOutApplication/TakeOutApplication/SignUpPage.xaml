@@ -11,10 +11,10 @@
             <Label Text="Sign Up" FontSize="Title"
                 />
             <Label Margin="0, 20, 0, 0" Text="Email" TextColor="#FFF3DA" FontSize="20"/>
-            <Entry Margin="-2,0,0,0" Placeholder="Your Email Address"  Keyboard="Email" />
+            <Entry Margin="-2,0,0,0" Placeholder="Your Email Address" x:Name="emailEntry" Keyboard="Email" />
 
             <Label Margin="0, 20, 0, 0" Text="Password" TextColor="#FFF3DA" FontSize="20"/>
-            <Entry Margin="-2,0,0,0" Placeholder="Password"  IsPassword="True"  />
+            <Entry Margin="-2,0,0,0" Placeholder="Password" x:Name="passwordEntry" IsPassword="True"  />
 
             <Button  Text="Sign Up" Clicked="SignUpButton_Clicked"/>
 
