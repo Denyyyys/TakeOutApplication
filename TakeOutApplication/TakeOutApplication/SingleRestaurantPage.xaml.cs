@@ -35,13 +35,14 @@ namespace TakeOutApplication
 
 		}
 
-		private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+		private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
 		{
 			if (sender is Image tappedImage)
 			{
 				if (tappedImage.BindingContext is Dish selectedDish)
 				{
 					UserData.orderedDishes.Add(selectedDish);
+					await DisplayAlert("Success", $"{selectedDish.dish_name} was successfully added to your cart!", "OK");
 				}
 			}
 		}

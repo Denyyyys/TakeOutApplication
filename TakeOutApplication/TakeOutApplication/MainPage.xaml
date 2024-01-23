@@ -23,8 +23,8 @@
         <ShellContent ContentTemplate="{DataTemplate local:SignInPage}"/>
     </ShellItem>-->
 
-    <ShellItem Route="RestaurantsPage" FlyoutItemIsVisible="False" >
-        <ShellContent ContentTemplate="{DataTemplate local:RestaurantsPage}"/>
+    <ShellItem Route="MyCartPage" FlyoutItemIsVisible="False" >
+        <ShellContent ContentTemplate="{DataTemplate local:MyCartPage}"/>
     </ShellItem>
 
 
