@@ -8,16 +8,26 @@
             xmlns:local="clr-namespace:TakeOutApplication"
             Title="TakeOutApplication"
             x:Class="TakeOutApplication.MainPage"
+            BackgroundColor="#ded1ba"
+            Shell.ForegroundColor="#222"
        >
+
+
+    
     <Shell.FlyoutHeader>
         <local:HeaderContentView/>
     </Shell.FlyoutHeader>
 
 
-    <ShellItem Route="SignInPage" FlyoutItemIsVisible="False">
+    <!--<ShellItem Route="SignInPage" FlyoutItemIsVisible="False" >
         <ShellContent ContentTemplate="{DataTemplate local:SignInPage}"/>
+    </ShellItem>-->
+
+    <ShellItem Route="RestaurantsPage" FlyoutItemIsVisible="False" >
+        <ShellContent ContentTemplate="{DataTemplate local:RestaurantsPage}"/>
     </ShellItem>
-    
+
+
     <!--<FlyoutItem Title="MyTabApp" 
                 Shell.TabBarIsVisible="False"
                 FlyoutDisplayOptions="AsMultipleItems">

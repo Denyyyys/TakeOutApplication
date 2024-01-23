@@ -26,7 +26,7 @@
 
     <StackLayout Padding="30, 100, 30, 0 " BackgroundColor="#BEADFA">
         <!--<Image Source="" />-->
-        <Label Text="Sign In" FontSize="Title"/>
+        <Label Text="Sign In" FontSize="Title" FontAttributes="Bold"/>
         <Label Text="Hi there! Nice to see you again." FontSize="Subtitle"/>
         <!--<Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
@@ -37,18 +37,18 @@
         <Label Margin="0, 20, 0, 0" Text="Password" TextColor="#FFF3DA" FontSize="20"/>
         <Entry Placeholder="Password" x:Name="passwordEntry" IsPassword="True"  />
 
-        <Button  Text="Sign in" Clicked="Button_Sign_In_Clicked"  />
+        <Button  Text="Sign in" Clicked="Button_Sign_In_Clicked" BackgroundColor="#FFF3DA" CornerRadius="10" />
 
-        <Grid VerticalOptions="EndAndExpand" Margin="0,0,0,20">
+        <Grid VerticalOptions="EndAndExpand" Margin="0,0,0,50">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <!-- First column content -->
-            <Label Grid.Column="0" Text="Forgot Password?" BackgroundColor="LightBlue"  />
+            <Label Grid.Column="0" Text="Forgot Password?" FontSize="Medium" TextColor="#280274" FontAttributes="Bold"  />
 
             <!-- Second column content -->
-            <Label Grid.Column="1" Text="Sign Up" BackgroundColor="LightGreen" HorizontalTextAlignment="End" >
+            <Label Grid.Column="1" Text="Sign Up" TextColor="#280274" FontAttributes="Bold"  FontSize="Medium" HorizontalTextAlignment="End" >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                 </Label.GestureRecognizers>

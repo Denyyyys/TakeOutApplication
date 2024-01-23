@@ -3,13 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TakeOutApplication"
              x:Class="TakeOutApplication.ProfilePage"
+             
              >
     
     <ContentPage.Content>
-        <StackLayout BackgroundColor="Aqua" Padding="20, 20, 15, 10">
+        <StackLayout BackgroundColor="#BEADFA" Padding="20, 20, 15, 10">
             
-            <Label Text="My Profile                 " FontSize="20" HorizontalTextAlignment="End" VerticalTextAlignment="End"/>
-            <BoxView HeightRequest="2"  Color="Black" HorizontalOptions="FillAndExpand"  />
+            <Label Text="My profile" FontSize="20" HorizontalTextAlignment="Start" VerticalTextAlignment="End" FontAttributes="Bold"/>
+            <BoxView HeightRequest="2"  Color="Black" HorizontalOptions="FillAndExpand"  Margin="0,0,0,15"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -24,42 +25,44 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- Row 0, Column 0 -->
-                <Label Text="My Balance" Grid.Row="0" Grid.Column="0" FontSize="Medium" BackgroundColor="LightGray" Margin="0,0,0,15" />
+                <Label Text="My Balance" TextColor="#444" Grid.Row="0" Grid.Column="0" FontSize="Medium" Margin="0,0,0,15" />
 
                 <!-- Row 0, Column 1 -->
-                <Label Text="Row 0, Column 1" Grid.Row="0" Grid.Column="1" BackgroundColor="LightGray" FontSize="Medium" Margin="0,0,0,15" x:Name="balanceLabel"/>
+                <Label Text="Row 0, Column 1" TextColor="#FFF3DA" Grid.Row="0" Grid.Column="1" FontSize="Medium" Margin="10,0,0,15" x:Name="balanceLabel"/>
 
                 <!-- Row 1, Column 0 -->
-                <Label Text="Favourite Restaurant" Grid.Row="1" Grid.Column="0" BackgroundColor="LightBlue" FontSize="Medium" Margin="0,0,0,15"/>
+                <Label Text="Favourite Restaurant" TextColor="#444" Grid.Row="1" Grid.Column="0" FontSize="Medium" Margin="0,0,0,15"/>
 
                 <!-- Row 1, Column 1 -->
-                <Label Text="Row 1, Column 1" Grid.Row="1" Grid.Column="1" BackgroundColor="LightBlue" FontSize="Medium" Margin="0,0,0,15" x:Name="favouriteRestaurantLabel"/>
+                <Label Text="Row 1, Column 1" TextColor="#FFF3DA" Grid.Row="1" Grid.Column="1" FontSize="Medium" Margin="10,0,0,15" x:Name="favouriteRestaurantLabel"/>
 
                 <!-- Row 2, Column 0 -->
-                <Label Text="Favouirite Food" Grid.Row="2" Grid.Column="0" BackgroundColor="LightGreen" FontSize="Medium" Margin="0,0,0,15"/>
+                <Label Text="Favouirite Food" TextColor="#444" Grid.Row="2" Grid.Column="0" FontSize="Medium" Margin="0,0,0,15"/>
 
                 <!-- Row 2, Column 1 -->
-                <Label Text="Row 2, Column 1" Grid.Row="2" Grid.Column="1" BackgroundColor="LightGreen" FontSize="Medium" Margin="0,0,0,15" x:Name="favouriteFoodLabel"/>
+                <Label Text="Row 2, Column 1" TextColor="#FFF3DA" Grid.Row="2" Grid.Column="1" FontSize="Medium" Margin="10,0,0,15" x:Name="favouriteFoodLabel"/>
 
                 <!-- Row 3, Column 0 -->
-                <Label Text="Email" Grid.Row="3" Grid.Column="0" BackgroundColor="LightPink" FontSize="Medium" Margin="0,0,0,15"/>
+                <Label Text="Email" TextColor="#444" Grid.Row="3" Grid.Column="0" FontSize="Medium" Margin="0,0,0,15"/>
 
                 <!-- Row 3, Column 1 -->
-                <Label Text="Row 3, Column 1" Grid.Row="3" Grid.Column="1" BackgroundColor="LightPink" FontSize="Medium" Margin="0,0,0,15" x:Name="emailLabel"/>
+                <Label Text="Row 3, Column 1" TextColor="#FFF3DA" Grid.Row="3" Grid.Column="1" FontSize="Medium" Margin="10,0,0,15" x:Name="emailLabel"/>
 
             </Grid>
-            <Label Text="Orders                     " FontSize="20" HorizontalTextAlignment="End" VerticalTextAlignment="End"/>
-            <BoxView HeightRequest="2"  Color="Black" HorizontalOptions="FillAndExpand"  />
+            <Label Text="Orders" FontSize="20" HorizontalTextAlignment="Start" VerticalTextAlignment="End" FontAttributes="Bold"/>
+            <BoxView HeightRequest="2"  Color="Black" HorizontalOptions="FillAndExpand" Margin="0,0,0,15"  />
 
 
-            <StackLayout  
+            <Frame  
                 VerticalOptions="FillAndExpand" 
                 HorizontalOptions="FillAndExpand" 
-                Padding="0,50,20,0"
+                Padding="10,50,20,0"
                 IsVisible="True"
-                BackgroundColor="Silver">
+                BackgroundColor="#988bc7"
+                CornerRadius="10"
+                >
                 <local:NoOrderdView />
-            </StackLayout>
+            </Frame>
             <!--<Label Text="you dont have any orders" IsVisible="{Binding haveOrders}"/>
             <Label Text="you have orders!!!" IsVisible="{Binding  haveOrders, Converter={StaticResource InverseBoolConverter}}/>-->
         </StackLayout>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TakeOutApplication.SingleRestaurantPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Restaurant" x:Name="restaurantNameLabel" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Large" Margin="0,20,0,10" />
+            <ListView x:Name="dishesListView" ItemSelected="dishesListView_ItemSelected" RowHeight="100">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="25"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Row 1 -->
+                                    <Label FontSize="Medium"  Text="Category:     " Grid.Row="0" Grid.Column="0" HorizontalOptions="Start"/>
+                                    <Label FontSize="Medium" Text="{Binding category}" Grid.Row="0" Grid.Column="1" HorizontalOptions="Start"/>
+                                    <!--<Label FontSize="Medium" Text="Buy!" Grid.Row="0" Grid.Column="2"  Margin="20,0,0,0" HorizontalOptions="Start"/>-->
+                                    <Image  Source="ic_action_add_shopping_cart.png" Grid.Row="0" Grid.Column="2"  Grid.RowSpan="2" HeightRequest="30" WidthRequest="30" Aspect="AspectFit" Margin="0,10,0,0" >
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding .}"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                    <!-- Row 2 -->
+                                    <Label FontSize="Medium" Text="Dish:" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start"/>
+                                    <Label FontSize="Medium" Text="{Binding dish_name}" Grid.Row="1" Grid.Column="1" HorizontalOptions="Start"/>
+
+
+
+                                </Grid>
+                                
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

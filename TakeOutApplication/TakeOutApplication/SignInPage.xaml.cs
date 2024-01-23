@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Grpc.Net.Client;
+using Greet;
+
 
 namespace TakeOutApplication
 {
@@ -17,7 +20,7 @@ namespace TakeOutApplication
             InitializeComponent();
         }
 
-
+     
         private async void Button_Sign_In_Clicked(object sender, EventArgs e)
         {
             UserData.Name = "Denys";

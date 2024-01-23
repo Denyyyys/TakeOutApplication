@@ -12,7 +12,7 @@ namespace TakeOutApplication
 
             //MainPage = new NavigationPage(new SignInPage());
             MainPage = new MainPage();
-        }
+		}
 
         protected override void OnStart()
         {
