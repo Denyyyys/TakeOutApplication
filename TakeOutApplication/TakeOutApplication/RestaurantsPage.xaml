@@ -3,18 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TakeOutApplication.RestaurantsPage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="#BEADFA">
             <Entry Placeholder="Search For Restaurant" Margin="10" x:Name="passwordEntry" IsPassword="True"  />
 
-            <ListView x:Name="restaurantListView" ItemSelected="restaurantListView_ItemSelected" 
+            <ListView x:Name="restaurantListView" ItemSelected="restaurantListView_ItemSelected" BackgroundColor="#BEADFA"
                   >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                             <!--<TextCell TextColor="Blue" Text="{Binding restaurant_name}"/>-->
                         <ViewCell>
-                            <Frame>
-                                <StackLayout >
-                                    <Label Text="{Binding restaurant_name}"  Padding="0,0,0,10" FontSize="Large" />
+                            <Frame BackgroundColor="#BEADFA">
+                                <StackLayout BackgroundColor="#BEADFA">
+                                    <Label Text="{Binding restaurant_name}"  Padding="0,0,0,10" FontSize="Large" BackgroundColor="#BEADFA" />
                                 </StackLayout>
                             </Frame>
                         </ViewCell>

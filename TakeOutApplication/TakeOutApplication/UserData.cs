@@ -22,7 +22,6 @@ namespace TakeOutApplication
 
 		public static ObservableCollection<Order> orders { get; set; } = new ObservableCollection<Order>()
 		{
-			new Order() { date = DateTime.Now, Id = 1, total_sum=UserData.orderedDishes.Sum(item => item.price), time_to_deliver=2, status=0, Dishes=orderedDishes},
 			//new Order() { date = DateTime.Now, Id = 1, total_sum=UserData.orderedDishes.Sum(item => item.price), time_to_deliver=2, status=0, Dishes=orderedDishes},
 			//new Order() { date = DateTime.Now, Id = 1, total_sum=UserData.orderedDishes.Sum(item => item.price), time_to_deliver=2, status=0, Dishes=orderedDishes},
 			//new Order() { date = DateTime.Now, Id = 1, total_sum=UserData.orderedDishes.Sum(item => item.price), time_to_deliver=2, status=0, Dishes=orderedDishes},
@@ -41,9 +40,10 @@ namespace TakeOutApplication
 			//new Order() { date = DateTime.Now, Id = 1, total_sum=UserData.orderedDishes.Sum(item => item.price), time_to_deliver=2, status=0, Dishes=orderedDishes},
 			//new Order() { date = DateTime.Now, Id = 1, total_sum=UserData.orderedDishes.Sum(item => item.price), time_to_deliver=2, status=0, Dishes=orderedDishes},
 			//new Order() { date = DateTime.Now, Id = 1, total_sum=UserData.orderedDishes.Sum(item => item.price), time_to_deliver=2, status=0, Dishes=orderedDishes},
-			new Order() { date = DateTime.Now, Id = 2, total_sum = UserData.orderedDishes.Sum(item => item.price), time_to_deliver = 3, status = 0, Dishes = orderedDishes},
-			new Order() { date = DateTime.Now, Id = 2, total_sum = UserData.orderedDishes.Sum(item => item.price), time_to_deliver = 3, status = 1, Dishes = orderedDishes},
-			new Order() { date = DateTime.Now, Id = 2, total_sum = UserData.orderedDishes.Sum(item => item.price), time_to_deliver = 3, status = 4, Dishes = orderedDishes}
+			//new Order() { date = DateTime.Now, Id = 1, total_sum=UserData.orderedDishes.Sum(item => item.price), time_to_deliver=2, status=0, Dishes=orderedDishes},
+			//new Order() { date = DateTime.Now, Id = 2, total_sum = UserData.orderedDishes.Sum(item => item.price), time_to_deliver = 3, status = 0, Dishes = orderedDishes},
+			//new Order() { date = DateTime.Now, Id = 2, total_sum = UserData.orderedDishes.Sum(item => item.price), time_to_deliver = 3, status = 1, Dishes = orderedDishes},
+			//new Order() { date = DateTime.Now, Id = 2, total_sum = UserData.orderedDishes.Sum(item => item.price), time_to_deliver = 3, status = 4, Dishes = orderedDishes}
 		};
 	};
 }
