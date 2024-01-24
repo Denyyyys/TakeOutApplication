@@ -3,10 +3,65 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TakeOutApplication.HistoryPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="history page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        
+        <StackLayout BackgroundColor="#BEADFA">
+            <Label Text="Active orders" FontAttributes="Bold" TextColor="#444" FontSize="Medium" Margin="20,15,0,15" />
+            <ScrollView HeightRequest="200">
+
+                <ListView x:Name="activeOrdersView" RowHeight="200" BackgroundColor="#BEADFA" VerticalOptions="Start">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame BackgroundColor="#BEADFA" >
+                                    <!--HorizontalOptions="Start" VerticalOptions="Center"-->
+                                    <StackLayout>
+                                        <Label FontSize="Medium"   Text="Zamówienia: " />
+                                        <Label FontSize="Medium"   Text="{Binding dish_names}" />
+                                        <Label FontSize="Medium"   Text="Data: " />
+                                        <Label FontSize="Medium"   Text="{Binding date}" />
+                                        <Label FontSize="Medium"   Text="Status: " />
+                                        <Label FontSize="Medium"   Text="{Binding status}" />
+
+                                        <Label FontSize="Medium"   Text="Price: " />
+                                        <Label FontSize="Medium"   Text="{Binding total_sum}" />
+                                        <BoxView Color="#222" HeightRequest="4" HorizontalOptions="FillAndExpand" Margin="0,0,0,5"/>
+
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+            <Label Text="Previous orders" FontAttributes="Bold" TextColor="#444" FontSize="Medium" Margin="20,0,0,15" />
+            <ScrollView HeightRequest="200">
+
+                <ListView x:Name="finishedOrdersView" RowHeight="200" BackgroundColor="#BEADFA" VerticalOptions="Start">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame BackgroundColor="#BEADFA" >
+                                    <!--HorizontalOptions="Start" VerticalOptions="Center"-->
+                                    <StackLayout>
+                                        <Label FontSize="Medium"   Text="Zamówienia: " />
+                                        <Label FontSize="Medium"   Text="{Binding dish_names}" />
+                                        <Label FontSize="Medium"   Text="Data: " />
+                                        <Label FontSize="Medium"   Text="{Binding date}" />
+                                        <Label FontSize="Medium"   Text="Status: " />
+                                        <Label FontSize="Medium"   Text="{Binding status}" />
+
+                                        <Label FontSize="Medium"   Text="Price: " />
+                                        <Label FontSize="Medium"   Text="{Binding total_sum}" />
+                                        <BoxView Color="#222" HeightRequest="4" HorizontalOptions="FillAndExpand" Margin="0,0,0,5"/>
+
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

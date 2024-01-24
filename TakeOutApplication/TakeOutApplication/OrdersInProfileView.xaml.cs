@@ -10,16 +10,13 @@ using Xamarin.Forms.Xaml;
 namespace TakeOutApplication
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class NoOrderdView : ContentView
+	public partial class OrdersInProfileView : ContentView
 	{
-		public NoOrderdView ()
+		public OrdersInProfileView ()
 		{
 			InitializeComponent ();
 		}
 
-		private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-		{
-			await Shell.Current.GoToAsync("//RestaurantsPage");
-		}
-    }
+
+	}
 }

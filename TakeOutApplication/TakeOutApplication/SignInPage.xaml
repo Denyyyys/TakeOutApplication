@@ -37,7 +37,7 @@
         <Label Margin="0, 20, 0, 0" Text="Password" TextColor="#FFF3DA" FontSize="20"/>
         <Entry Placeholder="Password" x:Name="passwordEntry" IsPassword="True"  />
 
-        <Button  Text="Sign in" Clicked="Button_Sign_In_Clicked" BackgroundColor="#FFF3DA" CornerRadius="10" />
+        <Button  Text="Sign in" TextColor="#280274" Clicked="Button_Sign_In_Clicked" BackgroundColor="#FFF3DA" CornerRadius="10" />
 
         <Grid VerticalOptions="EndAndExpand" Margin="0,0,0,50">
             <Grid.ColumnDefinitions>

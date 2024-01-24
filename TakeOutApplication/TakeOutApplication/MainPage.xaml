@@ -23,11 +23,13 @@
         <ShellContent ContentTemplate="{DataTemplate local:SignInPage}"/>
     </ShellItem>-->
 
-    <ShellItem Route="MyCartPage" FlyoutItemIsVisible="False" >
+    <!--<ShellItem Route="MyCartPage" FlyoutItemIsVisible="False" >
         <ShellContent ContentTemplate="{DataTemplate local:MyCartPage}"/>
+    </ShellItem>-->
+
+    <ShellItem Route="ProfilePage" FlyoutItemIsVisible="False" >
+        <ShellContent ContentTemplate="{DataTemplate local:ProfilePage}"/>
     </ShellItem>
-
-
     <!--<FlyoutItem Title="MyTabApp" 
                 Shell.TabBarIsVisible="False"
                 FlyoutDisplayOptions="AsMultipleItems">
@@ -52,9 +54,9 @@
         <ShellContent ContentTemplate="{DataTemplate local:RestaurantsPage}" Route="RestaurantsPage"/>
     </FlyoutItem>
 
-    <FlyoutItem Title="Favourites" Icon="ic_action_favorite.png">
+    <!--<FlyoutItem Title="Favourites" Icon="ic_action_favorite.png">
         <ShellContent ContentTemplate="{DataTemplate local:FavouritesPage}" Route="FavouritesPage"/>
-    </FlyoutItem>
+    </FlyoutItem>-->
 
     <FlyoutItem Title="History" Icon="ic_action_history.png">
         <ShellContent ContentTemplate="{DataTemplate local:HistoryPage}" Route="HistoryPage"/>

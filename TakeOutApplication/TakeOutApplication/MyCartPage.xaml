@@ -3,40 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TakeOutApplication.MyCartPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="totalPriceLabel" Text="Total Price: " ></Label>
-
-            <ListView x:Name="cartListView"  RowHeight="100" BackgroundColor="Red">
+        <StackLayout BackgroundColor="#BEADFA">
+            <!--<Label x:Name="totalPriceLabel" Text="Total Price: " ></Label>-->
+            <ScrollView>
+                
+            <ListView x:Name="cartListView"  RowHeight="75" BackgroundColor="#BEADFA" VerticalOptions="Start">
+                
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame>
-                                <Grid>
-                                    <Grid.RowDefinitions>
+                            
+                            <Frame BackgroundColor="#BEADFA" >
+                                
+                                <Grid BackgroundColor="#BEADFA" >
+                                    <Grid.RowDefinitions >
                                         <RowDefinition Height="50"/>
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
 
-                                    <!-- Row 1 -->
+                                        <!-- Row 1 -->
                                     <Label FontSize="Medium"   Text="{Binding dish_name}" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"/>
-                                    <Image BackgroundColor="Blue" Source="ic_action_remove_shopping_cart.png" Grid.Row="0" Grid.Column="1" HeightRequest="30" WidthRequest="30" Aspect="AspectFit" Margin="0,10,0,0" >
+                                        <Label FontSize="Medium" Text="{Binding price, StringFormat='{0}$'}" Grid.Row="0"  Grid.Column="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                                        <Image  Source="ic_action_remove_shopping_cart.png" Grid.Row="0" Grid.Column="2" HeightRequest="25" WidthRequest="25" Aspect="AspectFit"  Margin="10" >
                                         <Image.GestureRecognizers>
                                             <TapGestureRecognizer Tapped="removeItem_Tapped" CommandParameter="{Binding .}"/>
                                         </Image.GestureRecognizers>
                                     </Image>
 
-
-
                                 </Grid>
 
-                            </Frame>
+                                </Frame>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            </ScrollView>
+            <BoxView Color="#988bc7" HeightRequest="2" HorizontalOptions="FillAndExpand" Margin="0,0,0,5"/>
+
+            <Label x:Name="totalPriceLabel" Text="Total Price: " FontAttributes="Bold" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" FontSize="Large"></Label>
+            <Button  Text="Order!" Clicked="OrderButton_Clicked"  BackgroundColor="#FFF3DA" CornerRadius="10" Margin="10,0,10,50" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

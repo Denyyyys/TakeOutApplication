@@ -57,12 +57,54 @@
                 VerticalOptions="FillAndExpand" 
                 HorizontalOptions="FillAndExpand" 
                 Padding="10,50,20,0"
-                IsVisible="True"
+                IsVisible="{Binding showNoOrdersView}"
                 BackgroundColor="#988bc7"
                 CornerRadius="10"
                 >
                 <local:NoOrderdView />
             </Frame>
+
+
+            <Frame  
+                VerticalOptions="FillAndExpand" 
+                HorizontalOptions="FillAndExpand" 
+                Padding="10,50,20,0"
+                IsVisible="{Binding showYouHaveOrders}"
+                BackgroundColor="#988bc7"
+                CornerRadius="10"
+                
+                >
+                <Label Text="You have orders!&#xA; Click Here to see them" FontAttributes="Bold" TextColor="#ddd" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ShowOrdersLabelTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Frame>
+
+
+            <!--<ListView x:Name="OrdersListView" BackgroundColor="Red" VerticalOptions="Start">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame >
+                                    <Grid >
+                                        <Grid.RowDefinitions >
+                                            <RowDefinition Height="50"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        --><!-- Row 1 --><!--
+                                        <Label FontSize="Medium" BackgroundColor="IndianRed" Text="Email"  Grid.Row="0" Grid.Column="0"/>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+
+
             <!--<Label Text="you dont have any orders" IsVisible="{Binding haveOrders}"/>
             <Label Text="you have orders!!!" IsVisible="{Binding  haveOrders, Converter={StaticResource InverseBoolConverter}}/>-->
         </StackLayout>

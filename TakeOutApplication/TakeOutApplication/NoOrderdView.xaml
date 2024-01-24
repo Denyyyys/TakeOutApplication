@@ -6,7 +6,11 @@
         
         <StackLayout >
             <Label Text="You don't have any orders" FontAttributes="Bold" TextColor="#ddd" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Medium"/>
-            <Label Text="Order Now" TextDecorations="Underline" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Large" FontAttributes="Bold" TextColor="#FFF3DA"/>
+            <Label  Text="Order Now" TextDecorations="Underline" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Large" FontAttributes="Bold" TextColor="#FFF3DA">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
         </StackLayout>
     </ContentView.Content>
 </ContentView>
