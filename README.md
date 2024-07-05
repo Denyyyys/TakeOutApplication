@@ -1,2 +1,2 @@
 # About
-Android application for student project for delivering food.
+Android application, written using Xamarin technology for student project for delivering food.
